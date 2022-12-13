@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
   res.status(200).json({ message: 'Welcome to the car RESTful API!' });
 });
 
-app.use("/api/car", require("./car/carRouter"));
+app.use("/api/clothes", require("./clothes/clothesRouter"));
 app.use("/api/users", require('./usersRoutes/usersRoutes.js'))
 
 
