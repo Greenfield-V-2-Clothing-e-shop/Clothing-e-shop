@@ -7,7 +7,7 @@ var usersSchema = mongoose.Schema({
     name:String,
     email:String,
     pwd:String,
-    
+    card:{type:Number, default:0}
 });
  
 
