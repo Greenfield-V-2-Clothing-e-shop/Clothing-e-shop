@@ -7,10 +7,10 @@ mongoose.Promise=global.Promise
 
 var clothes= mongoose.Schema({
     name: String,
+    categorie:String,
     brand:String,
     price:Number,
     imageUrl:String,
-    rating:Number,
     size:String,
     color:String,
     favorites:{ type: Boolean, default: false }

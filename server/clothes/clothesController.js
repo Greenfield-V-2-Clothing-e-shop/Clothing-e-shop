@@ -1,9 +1,9 @@
 var clothes = require("./clothes")
 
-function getAll(req, res) {
-    const clothes =  clothes.find({});
-    res.send(clothes);
-}
+async  function getAll(req, res) {
+    const clothess = await clothes.find({})
+    res.json(clothess);
+  }
 function createOne(req, res) {
     console.log(req.user);
     clothes
