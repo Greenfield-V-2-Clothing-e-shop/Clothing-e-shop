@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 });
 
 app.use("/api/clothes", require("./clothes/clothesRouter"));
-app.use("/api/users", require('./usersRoutes/usersRoutes.js'))
+app.use("/api/users", require('./userroutes/usersRoutes'))
 
 
 var PORT = 4000;

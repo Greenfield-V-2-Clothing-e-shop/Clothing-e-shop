@@ -1,11 +1,11 @@
-var carRouter = require("express").Router();
-var carController = require("./carController");
+var clothesRouter = require("express").Router();
+var clothescontroller = require("./clothesController");
 
-carRouter.get("/", carController.getAll);
-carRouter.get("/:id", carController.getOne);
+clothesRouter.get("/", clothescontroller.getAll);
+clothesRouter.get("/:id", clothescontroller.getOne);
 
-carRouter.post("/",  carController.createOne);
-carRouter.delete("/:id",  carController.deleteOne);
-carRouter.put("/:id",  carController.updateOne);
+clothesRouter.post("/",  clothescontroller.createOne);
+clothesRouter.delete("/:id",  clothescontroller.deleteOne);
+clothesRouter.put("/:id",  clothescontroller.updateOne);
 
-module.exports = carRouter;
+module.exports = clothesRouter;

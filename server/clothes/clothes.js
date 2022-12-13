@@ -1,5 +1,5 @@
 var mongoose =require("mongoose")
-const db=require("../db/index.js")
+const db=require("../db/index")
 
 mongoose.Promise=global.Promise
 

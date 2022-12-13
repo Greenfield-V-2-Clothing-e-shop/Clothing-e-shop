@@ -1,12 +1,12 @@
 var clothes = require("./clothes")
 
-async function getAll(req, res) {
-    const clothes = await car.find({});
+function getAll(req, res) {
+    const clothes =  clothes.find({});
     res.send(clothes);
 }
 function createOne(req, res) {
     console.log(req.user);
-    car
+    clothes
         .insertMany({
             name: req.body.name,
             brand: req.body.brand,
@@ -23,7 +23,7 @@ function createOne(req, res) {
 function updateOne(req, res) {
     console.log(req.params);
 
-    car
+    clothes
         .findOneAndUpdate(
             { _id: req.params.id },
             {
@@ -46,7 +46,7 @@ function deleteOne(req, res) {
     console.log(req.params);
     let id = req.params.id;
     console.log(id);
-    car
+    clothes
         .findByIdAndDelete(id)
         .then(() => {
             res.send("deleted");
@@ -57,7 +57,7 @@ function deleteOne(req, res) {
 }
 
 function getOne(req, res) {
-    car
+    clothes
         .findById(req.params.id)
         .then((response) => {
             res.send(response);
