@@ -15,13 +15,15 @@ import Link from "next/link"
 
 
 
-type Anchor = 'left' 
+type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 export default function TemporaryDrawer() {
   const router = useRouter();
   const [state, setState] = React.useState({
+    top: false,
     left: false,
-
+    bottom: false,
+    right: false,
   });
 
   const handleClick = (e, path) => { //hédhi béch témchi lél page search
@@ -50,7 +52,7 @@ export default function TemporaryDrawer() {
 
   const list = (anchor: Anchor) => (
     <Box
-
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
       role="presentation"
       // onClick={toggleDrawer(anchor, false)}
       
