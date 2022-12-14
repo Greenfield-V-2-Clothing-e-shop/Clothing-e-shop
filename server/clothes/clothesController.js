@@ -16,7 +16,8 @@ function createOne(req, res) {
             color: req.body.color,
         })
         .then((data) => {
-            res.send(data);
+            res.send(data)
+            console.log("done");
         });
 }
 
