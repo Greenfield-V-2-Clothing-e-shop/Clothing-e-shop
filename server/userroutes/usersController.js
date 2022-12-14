@@ -54,7 +54,7 @@ const register = async (req, res) => {
     const user = new users({
       name,
       email,
-      pwd: newpassword,
+      password: newpassword,
     });
 
     user.save();
@@ -63,7 +63,8 @@ const register = async (req, res) => {
   } catch (error) {
     res.status(500).send(error);
   }
-};module.exports = { register, login };
+}
+module.exports = { register, login };
 
 
 
