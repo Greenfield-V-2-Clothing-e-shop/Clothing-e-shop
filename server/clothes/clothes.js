@@ -13,7 +13,7 @@ var clothes= mongoose.Schema({
     imageUrl:String,
     size:String,
     color:String,
-    favorites:{ type: Boolean, default: false }
+    // favorites:{ type: Boolean, default: false }
 })
 
 
