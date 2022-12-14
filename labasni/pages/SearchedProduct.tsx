@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 export default function SearchedProduct() {
-  return (<Card sx={{ maxWidth: 345 }}>
+  return (<Card sx={{ maxWidth: 250 }}>
   <CardMedia
     component="img"
     height="190"

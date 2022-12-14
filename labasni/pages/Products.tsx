@@ -8,10 +8,10 @@ import Typography from '@mui/material/Typography';
 export default function Products(){
   return (
     <div>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 250 }}>
   <CardMedia
     component="img"
-    height="250"
+    height="190"
     image="https://underarmour.scene7.com/is/image/Underarmour/PS1345317-001_HF?rp=standard-0pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=F0F0F0&wid=566&hei=708&size=566,708"
     alt="green iguana"
   />
@@ -22,10 +22,13 @@ export default function Products(){
     <Typography variant="body2" color="text.secondary">
       Price : $60
     </Typography>
+    <Typography variant="body3" color="text.secondary">
+      Color: Black
+    </Typography>
   </CardContent>
   <CardActions>
-    <Button size="small">Favorite</Button>
-    <Button size="small">Learn More</Button>
+    <Button size="small">💖</Button>
+    <Button size="small">Buy</Button>
   </CardActions>
 </Card>
     </div>
