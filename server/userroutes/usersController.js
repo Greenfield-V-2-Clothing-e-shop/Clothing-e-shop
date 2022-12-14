@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 async function login(req, res) {
+  console.log("helloooo");
   try {
     const {
       body: { email, password },
@@ -20,7 +21,7 @@ async function login(req, res) {
       return res.status(400).json({ message: "Bad cred" });
     }
 
-    const isPasswordValid = await bcrypt.compare(password, user.pwd);
+    const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (!isPasswordValid) {
       return res.status(400).json({ message: "Bad cred" });
