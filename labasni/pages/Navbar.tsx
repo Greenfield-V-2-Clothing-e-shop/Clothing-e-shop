@@ -17,7 +17,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Stack from '@mui/material/Stack';
 import LogoutIcon from '@mui/icons-material/Logout';
 
-const pages = ['Home', 'Products', 'About us'];
+const pages = ['Home', 'Products', 'About us',"cart","login"];
 // const pages = [{name:"Home", path:"http://localhost:3000/home"}]
 
 function ResponsiveAppBar() {
@@ -130,15 +130,19 @@ function ResponsiveAppBar() {
             </Button>
   
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
-          <Button variant="contained" endIcon={<AddShoppingCartIcon />}>
-            Add to Cart
+
+         <Button variant="contained" endIcon={<AddShoppingCartIcon />}>
+          
+            <Link href="/Cart">cart </Link>
             </Button>
+          
             <Tooltip title="Logout">
+            <Link href="/login">
             <Button variant="contained" color="error" endIcon={<LogoutIcon/>}>
               Logout
             </Button>
+            </Link>
             </Tooltip>
           </Box>
         </Toolbar>
