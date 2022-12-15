@@ -138,11 +138,11 @@ function ResponsiveAppBar() {
             </Button>
           
             <Tooltip title="Logout">
-            <Link href="/login">
+            
             <Button variant="contained" color="error" endIcon={<LogoutIcon/>}>
-              Logout
+            <Link href="/Login"> Logout</Link>
             </Button>
-            </Link>
+            
             </Tooltip>
           </Box>
         </Toolbar>
