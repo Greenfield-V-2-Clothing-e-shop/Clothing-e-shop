@@ -148,12 +148,14 @@ useEffect(()=>gettingData(),[])
         return (
           
 <div>
-        <Card sx={{ maxWidth: 250 }}>
+        <Card sx={{ maxWidth: 250 }} >
       <CardMedia
+      
         component="img"
         height="190"
         image={e.imageUrl}
         alt="green iguana"
+        
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
