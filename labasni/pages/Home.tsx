@@ -1,52 +1,36 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import React, { Component } from 'react';
 
-export default function Home() {
-  return (
-    <div>
-      <h2 className="Labbesni">Labbesni</h2>
-      <Carousel>
-        <div>
-          <img
-            className="taswira"
-            src="https://www.febsport.com/media/x490/Nike_Air_Max_Shoes/Air_Max_270/Nike_Air_Max_270_Gs_Black_Volt_Oil_Grey_943345-011.jpg"
-            alt="image1"
-          />
-          <p className="legend">Image 1</p>
-        </div>
-        <div>
-          <img
-            className="taswira"
-            src="https://www.febsport.com/media/x490/Nike_Air_Max_Shoes/Air_Max_270/Nike_Air_Max_720_SE_Galaxy_Black_Flash_Crimson_Silt_Red_CW0904-001.jpg"
-            alt="image2"
-          />
-          <p className="legend">Image 2</p>
-        </div>
-        <div>
-          <img
-            className="taswira"
-            src="https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/resize=height:250,width:375,fit:crop/output=quality:70/compress/https://process.fs.grailed.com/MncvobOSbqsm59QlSs9P"
-            alt="image3"
-          />
-          <p className="legend">Image 3</p>
-        </div>
-        <div>
-          <img
-            className="taswira"
-            src="https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/resize=height:250,width:375,fit:crop/output=quality:70/compress/https://process.fs.grailed.com/5qMi9EgPSIqETbQO19cf"
-            alt="image4"
-          />
-          <p className="legend">Image 4</p>
-        </div>
-        <div>
-          <img
-            className="taswira"
-            src="https://cdn.shopify.com/s/files/1/0746/5359/products/298823_5f076736039df8.73525996_2_large_79d51d8d-cf80-4657-9042-05e9320ac3d7_2000x.png?v=1642800741"
-            alt="image5"
-          />
-          <p className="legend">Image 5</p>
-        </div>
-      </Carousel>
-    </div>
-  );
-}
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
+   export default function Home() {
+        return (
+          <Carousel>
+            <div>
+              <img src="https://www.dontwasteyourmoney.com/wp-content/uploads/2022/03/AdobeStock_455693064-scaled-e1648762469950-900x400.jpeg" />
+              <p className="legend">Basketball</p>
+            </div>
+            <div>
+              <img src="https://i0.wp.com/cultofcalcio.com/wp-content/uploads/2020/09/higuain_1599006652.jpg?resize=900%2C400&ssl=1" />
+              <p className="legend">Football</p>
+            </div>
+            <div>
+              <img src="https://images.squarespace-cdn.com/content/v1/5ca9152c70468037cc354f1b/1574495425642-EAQLWFPYRD9X2Q4BT7EZ/workout+wear+ideas.jpg" />
+              <p className="legend">Stretch</p>
+            </div>
+            <div>
+              <img src="https://image.uniqlo.com/UQ/ST3/eu/imagesother/2019/Categories/Men/Performance-gamewear/desktop-subcat-mm-gamewear-nishikori-190816.jpg" />
+              <p className="legend">Tennis</p>
+            </div>
+            <div>
+              <img src="https://www.merthyrtownfc.co.uk/media/2768/jpeg-image-00cad84a1353-1.jpeg?width=900&height=400&mode=crop" />
+              <p className="legend">Rugby</p>
+            </div>
+            <div>
+              <img src="https://contents.mediadecathlon.com/s810022/k$5a51edfbb53c3708c2fb350e3610ad3b/1180x0/450pt200/900xcr400/SG-Content-1-10-essentials-for-a-ski-trip.jpg?format=auto&quality=80" />
+              <p className="legend">Ski</p>
+            </div>
+          </Carousel>
+        );
+    }
+
