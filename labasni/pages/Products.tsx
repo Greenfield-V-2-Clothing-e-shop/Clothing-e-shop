@@ -5,32 +5,48 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import axios from 'axios'
+import { Grid } from '@mui/material';
+import {useEffect, useState} from 'react'
+
+
 export default function Products(){
-  return (
-    <div>
-      <Card sx={{ maxWidth: 250 }}>
-  <CardMedia
-    component="img"
-    height="190"
-    image="https://underarmour.scene7.com/is/image/Underarmour/PS1345317-001_HF?rp=standard-0pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=F0F0F0&wid=566&hei=708&size=566,708"
-    alt="green iguana"
-  />
-  <CardContent>
-    <Typography gutterBottom variant="h5" component="div">
-    Mens UA Meridian Short Sleeve
-    </Typography>
-    <Typography variant="body2" color="text.secondary">
-      Price : $60
-    </Typography>
-    <Typography variant="body3" color="text.secondary">
-      Color: Black
-    </Typography>
-  </CardContent>
-  <CardActions>
-    <Button size="small">💖</Button>
-    <Button size="small">Buy</Button>
-  </CardActions>
-</Card>
-    </div>
-  )
+const [data,setData]=useState([])
+  function getData(){
+    axios.get("http://localhost:5000/api/clothes").then(res =>{
+      setData(res.data)
+    }).catch(err=> console.log(err))
+  }
+  useEffect(()=>getData(),[])
+
+  return data.map(e=>{
+    return (
+      
+       <Card sx={{ maxWidth: 250 }}
+       >
+    <CardMedia
+      component="img"
+      height="190"
+      image={e.imageUrl}
+      alt="green iguana"
+    />
+    <CardContent>
+      <Typography gutterBottom variant="h5" component="div">
+      {e.name}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">
+        Price : ${e.price}
+      </Typography>
+      <Typography variant="body3" color="text.secondary">
+        Color: {e.color}
+      </Typography>
+    </CardContent>
+    <CardActions>
+      <Button size="small">💖</Button>
+      <Button size="small">Buy</Button>
+    </CardActions>
+  </Card>
+     )
+  })
+  
 }
