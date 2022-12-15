@@ -119,7 +119,7 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Button>
-            <Link style={{color:"white"}} href="/">Home</Link>
+            <Link style={{color:"white"}} href="/Home">Home</Link>
             </Button>
             <Button>
             <Link style={{color:"white"}} href="/Products">Products</Link>

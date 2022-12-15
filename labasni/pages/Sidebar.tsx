@@ -28,7 +28,7 @@ export default function TemporaryDrawer() {
 
   const handleClick = (e, path) => { //hédhi béch témchi lél page search
     if (path === "/SearchedProduct") {
-      console.log("I clicked on the About Page");
+      console.log("I clicked on the Page");
     }
   }
 
