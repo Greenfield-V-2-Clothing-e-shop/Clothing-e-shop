@@ -19,7 +19,7 @@ const theme = createTheme();
 function Copyright(props: any) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
+      {'Copyright Â© '}
       <Link color="inherit" href="https://mui.com/">
         LABASNI
       </Link>{' '}

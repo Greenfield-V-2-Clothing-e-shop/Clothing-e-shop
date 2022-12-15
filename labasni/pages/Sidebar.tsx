@@ -105,6 +105,9 @@ useEffect(()=>gettingData(),[])
       <FormControlLabel control={<Checkbox />} label="Red" onChange={()=> getColor('red')}/>
       <FormControlLabel control={<Checkbox />} label="Blue" onChange={()=> getColor('blue')}/>
       <FormControlLabel control={<Checkbox />} label="black" onChange={()=> getColor('black')} />
+      <FormControlLabel control={<Checkbox />} label="pink" onChange={()=> getColor('pink')}/>
+      <FormControlLabel control={<Checkbox />} label="yellow" onChange={()=> getColor('yellow')}/>
+      <FormControlLabel control={<Checkbox />} label="white" onChange={()=> getColor('white')}/>
     </FormGroup>
           </ListItem>
           <ListItem disablePadding>

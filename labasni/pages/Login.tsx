@@ -18,7 +18,7 @@ import axios from 'axios';
 function Copyright(props: any) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
+      {'Copyright Â© '}
       <Link color="inherit" href="https://mui.com/">
         LABASNI
       </Link>{' '}
@@ -43,7 +43,7 @@ async function handleSubmit(event:any){
   try {
     event.preventDefault();
 
-    const user = await axios.post("http://localhost:4000/api/users/login", {
+    const user = await axios.post("http://localhost:5000/api/users/login", {
       email,
       password,
     });
@@ -113,7 +113,7 @@ async function handleSubmit(event:any){
               sx={{ mt: 3, mb: 2 }}
               disabled={!validateForm()}
             >
-              <Link href="/"> Sign Up</Link>
+              <Link href="/Home"> Sign Up</Link>
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>

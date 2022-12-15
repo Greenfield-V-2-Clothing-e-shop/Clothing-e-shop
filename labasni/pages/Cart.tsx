@@ -38,6 +38,11 @@ export default function Cart() {
   <CardActions>
   </CardActions>
 </Card>
+<div className="card p-5">
+          <Button variant="contained" endIcon={<BeenhereIcon />}>
+        <Link href="/Product" >buy</Link>
+        </Button>
+          </div>
 </div>
   )
 }

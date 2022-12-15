@@ -26,10 +26,10 @@ import { Carousel } from 'react-responsive-carousel';
               <p className="legend">UNDERARMOUR</p>
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuQOadd1mMitu3an90ysRj6HkHAKS032uUGA&usqp=CAU" />
             </div>
-            <div>
+            {/* <div>
               <img src="https://cdn.about.puma.com/img/layout/Logo_PUMA-Cat_dark.svg"/>
               <p className="legend">PUMA</p>
-            </div>
+            </div> */}
           </Carousel>
         );
     }
