@@ -16,7 +16,6 @@ function getData(){
   }).catch(err=> console.log(err))
 }
 useEffect(()=>getData(),[])
-
 }
 
 

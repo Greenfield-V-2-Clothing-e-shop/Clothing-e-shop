@@ -6,7 +6,9 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import BeenhereIcon from '@mui/icons-material/Beenhere';
 export default function Cart() {
-return (
+
+
+  return (
    <div>
       <div className="py-2">
       <Button>
