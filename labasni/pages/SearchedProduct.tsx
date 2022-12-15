@@ -11,20 +11,18 @@ export default function SearchedProduct() {
   <CardMedia
     component="img"
     height="190"
-    image="https://underarmour.scene7.com/is/image/Underarmour/PS1345317-001_HF?rp=standard-0pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=F0F0F0&wid=566&hei=708&size=566,708"
+    image="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/417c644b-dbb4-4130-842e-ae6d2fffd30f/chaussure-de-football-a-crampons-pour-terrain-sec-gripknit-phantom-gx-elite-fg-C0D3tn.png"
     alt="green iguana"
   />
   <CardContent>
     <Typography gutterBottom variant="h5" component="div">
-    Mens UA Meridian Short Sleeve
+    Nike Gripknit Phantom GX Elite FG
     </Typography>
     <Typography variant="body2" color="text.secondary">
-      Price : $60
+      Price : $259.99
     </Typography>
   </CardContent>
   <CardActions>
-    <Button size="small">Favorite</Button>
-    <Button size="small">Learn More</Button>
   </CardActions>
 </Card>
 )
