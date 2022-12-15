@@ -19,16 +19,25 @@ const [data,setData]=useState([])
   }
   useEffect(()=>getData(),[])
 
-  return data.map(e=>{
+  return (
+    <Grid
+  container 
+  direction="row"
+  justifyContent="flex-start"
+  alignItems="center"
+  display= "flex"
+  justify="center"
+>
+    {data.map(e=>{
     return (
-      
+      <Grid xs={2.5}>
        <Card sx={{ maxWidth: 250 }}
        >
     <CardMedia
       component="img"
       height="190"
       image={e.imageUrl}
-      alt="green iguana"
+      alt="Product"
     />
     <CardContent>
       <Typography gutterBottom variant="h5" component="div">
@@ -46,7 +55,8 @@ const [data,setData]=useState([])
       <Button size="small">Buy</Button>
     </CardActions>
   </Card>
+  </Grid>
      )
-  })
+  })}</Grid>)
   
 }
