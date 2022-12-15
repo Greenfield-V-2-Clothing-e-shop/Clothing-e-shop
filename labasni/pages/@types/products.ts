@@ -1,3 +1,4 @@
+// @types.products.ts
 export interface Prods {
     name: String;
     categorie:String;
