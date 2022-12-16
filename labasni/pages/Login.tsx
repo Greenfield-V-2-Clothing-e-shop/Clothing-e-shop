@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useState} from "react"
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 function Copyright(props: any) {
   return (
@@ -31,6 +32,8 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export default function Login() {
+  const router = useRouter()
+
     const [email, setEmail] = useState("");
 
   const [password, setPassword] = useState("");
@@ -39,7 +42,7 @@ export default function Login() {
     return email.length > 0 && password.length > 0;
 }
 async function handleSubmit(event:any){
-  event.preventDefault();
+
   try {
     event.preventDefault();
 
@@ -49,9 +52,8 @@ async function handleSubmit(event:any){
     });
 
     if (user) {
-      <Link href='/'> </Link>
-      console.log(user.data.id);
-      localStorage.setItem("token", user.data.token);
+      router.push("/Home")
+       localStorage.setItem("token", user.data.token);
       localStorage.setItem("id", user.data.id);
     }
   } catch (error) {
@@ -78,7 +80,7 @@ async function handleSubmit(event:any){
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate   sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
@@ -112,8 +114,9 @@ async function handleSubmit(event:any){
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
               disabled={!validateForm()}
+              onClick={handleSubmit}
             >
-              <Link href="/Home"> Sign Up</Link>
+               Sign Up 
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>

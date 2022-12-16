@@ -7,7 +7,7 @@ import { ReactNode } from 'react';
 
 export const TodoContext = React.createContext<ProductContextType | null>(null);
 
-export const ProductProvider: React.FC<React.ReactNode> = ( children  ) => {
+export const ProductProvider: React.FC<ReactNode> = ( children  ) => {
   const [products, setProducts] = React.useState<Prods[]>([])
 function getData(){
   axios.get("http://localhost:5000/api/clothes").then(res =>{

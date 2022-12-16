@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
 import { useState } from 'react';
+import { useRouter } from 'next/router'
 const theme = createTheme();
 
 function Copyright(props: any) {
@@ -33,8 +34,10 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event:any) => {
-    event.preventDefault();
+  const router = useRouter()
+  const handleSubmit = async (event:any) => {
+    try {
+      event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
       name:data.get("name"),
@@ -42,11 +45,17 @@ export default function Register() {
       password: data.get('password'),
       
     })
-    axios.post("http://localhost:5000/api/users/register",{
-      name,
-      email,
-      password
+  const res = await axios.post("http://localhost:5000/api/users/register",{
+      name:data.get("name"),
+      email: data.get('email'),
+      password: data.get('password'),
     })
+router.push("/Login")
+alert("User Saved, please login")
+    } catch (error) {
+      console.log(error)
+    }
+    
   }
   function validateForm() {
     return email.length > 0 && password.length > 0;
