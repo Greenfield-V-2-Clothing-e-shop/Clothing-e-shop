@@ -1,29 +1,36 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {useState} from "react"
-import axios from 'axios';
+import * as React from "react";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useState } from "react";
+import axios from "axios";
+// import User from "../../server/userroutes/users";
+
 
 function Copyright(props: any) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
         LABASNI
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
@@ -31,34 +38,34 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export default function Login() {
-    const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
 
   const [password, setPassword] = useState("");
   
   function validateForm() {
     return email.length > 0 && password.length > 0;
-}
-async function handleSubmit(event:any){
-  event.preventDefault();
-  try {
-    event.preventDefault();
-
-    const user = await axios.post("http://localhost:4000/api/users/login", {
-      email,
-      password,
-    });
-
-    if (user) {
-      <Link href='/'> </Link>
-      console.log(user.data.id);
-      localStorage.setItem("token", user.data.token);
-      localStorage.setItem("id", user.data.id);
-    }
-  } catch (error) {
-    console.log(error);
-    alert("bad cred");
   }
-}
+  async function handleSubmit(event: any) {
+    event.preventDefault();
+    try {
+      event.preventDefault();
+
+      const user = await axios.post("http://localhost:5000/api/users/login", {
+        email,
+        password,
+      });
+
+      if (user) {
+        <Link href="/"> </Link>;
+        console.log(user.data.id);
+        localStorage.setItem("token", user.data.token);
+        localStorage.setItem("id", user.data.id);
+      }
+    } catch (error) {
+      console.log(error);
+      alert("bad cred");
+    }
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -67,18 +74,23 @@ async function handleSubmit(event:any){
         <Box
           sx={{
             marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box
+            component="form"
+            noValidate
+            onSubmit={handleSubmit}
+            sx={{ mt: 3 }}
+          >
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
@@ -102,7 +114,7 @@ async function handleSubmit(event:any){
                   id="password"
                   value={password}
                   autoComplete="new-password"
-                 onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </Grid>
             </Grid>
