@@ -1,7 +1,7 @@
 var clothes = require("./clothes")
 
 async  function getAll(req, res) {
-    const clothess = await clothes.find({})
+    const clothess = await clothes.find({}).sort({createdAt:-1})
     res.json(clothess);
   }
 function createOne(req, res) {

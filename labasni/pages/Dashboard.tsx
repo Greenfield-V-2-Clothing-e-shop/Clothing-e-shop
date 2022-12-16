@@ -15,6 +15,7 @@ import InputLabel from "@mui/material/InputLabel";
 import FilledInput from "@mui/material/FilledInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import { useRouter } from "next/router";
+import Alert from '@mui/material/Alert';
 
 
 const Img = styled("img")({
@@ -42,6 +43,7 @@ const Dashboard = (event: any) => {
   const [image, setImage] = useState("");
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
+ 
   const router = useRouter();
   // async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   //   event.preventDefault();
@@ -209,8 +211,9 @@ const Dashboard = (event: any) => {
                         onClick={() => {
                           axios.delete(
                             `http://localhost:5000/api/clothes/${e._id}`
-                          );
-                          window.location.reload();
+                          ).then((res)=> {console.log(res)
+                          window.location.reload()})
+                          
                         }}
                       >
                         Remove

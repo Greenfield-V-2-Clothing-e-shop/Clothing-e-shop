@@ -6,7 +6,7 @@ clothesRouter.get("/", clothescontroller.getAll);
 clothesRouter.get("/:id", clothescontroller.getOne);
 //should  clothesRouter.post("/",authMiddelware,clothescontroller.createOne)
 clothesRouter.post("/", clothescontroller.createOne);
-clothesRouter.delete("/:id", authMiddelware, clothescontroller.deleteOne);
+clothesRouter.delete("/:id", clothescontroller.deleteOne);
 clothesRouter.put("/:id", authMiddelware,clothescontroller.updateOne);
 
 module.exports = clothesRouter;
