@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 var usersSchema = mongoose.Schema({
     name:String,
     email:String,
-    pwd:String,
+    password:String,
     card:{type:Number, default:0}
 });
  

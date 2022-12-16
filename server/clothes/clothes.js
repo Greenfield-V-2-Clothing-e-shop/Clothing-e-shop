@@ -7,7 +7,6 @@ mongoose.Promise=global.Promise
 
 var clothes= mongoose.Schema({
     name: String,
-    categorie:String,
     brand:String,
     price:Number,
     imageUrl:String,
