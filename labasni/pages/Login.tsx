@@ -49,9 +49,11 @@ async function handleSubmit(event:any){
     const user = await axios.post("http://localhost:5000/api/users/login", {
       email,
       password,
-    });
-
-    if (user) {
+    })
+    if (email==="admin@gmail.com"){
+      router.push('/Dashboard')
+    }
+    else {
       router.push("/Home")
        localStorage.setItem("token", user.data.token);
       localStorage.setItem("id", user.data.id);
