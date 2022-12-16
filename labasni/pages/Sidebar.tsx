@@ -54,7 +54,7 @@ useEffect(()=>gettingData(),[])
   };
 
   const handleClick = (e:any, path:any) => { //hédhi béch témchi lél page search
-    if (path === "/SearchedProduct") {
+    if (path === "/Products") {
       console.log("I clicked on the Page");
     }
   }
@@ -123,7 +123,7 @@ useEffect(()=>gettingData(),[])
           </ListItem>
           <ListItem disablePadding>
           <FormGroup>
-          <h3>Price</h3>
+          {/* <h3>Price</h3>
           <Slider sx={{width:200}}
         aria-label="Temperature"
         defaultValue={30}
@@ -133,12 +133,12 @@ useEffect(()=>gettingData(),[])
         marks
         min={10}
         max={110}
-      />
+      /> */}
     </FormGroup>
           </ListItem>
       </List>
       <Button variant="contained" color="success">
-      <Link href="/SearchedProduct" onClick={handleToggle}>
+      <Link href="/Products" onClick={handleToggle}>
       Submit Search
       </Link>{" "}
 </Button>
